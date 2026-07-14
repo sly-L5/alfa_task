@@ -7,13 +7,13 @@ public class Main {
         System.out.println("=== Сравнение по количеству товаров ===");
 
         if (petiaBasket.length == koliaBasket.length) {
-            System.out.println("Количество товаров у Пети и Коли одинаковое: " + petiaBasket.length);
+            System.out.println("Количество товаров у Пети и Коли равное: " + petiaBasket.length);
         } else {
             System.out.println("Количество товаров у Пети и Коли разное");
         }
 
         if (petiaBasket.length == terentiiBasket.length) {
-            System.out.println("Количество товаров у Пети и Терентия одинаковое: " + petiaBasket.length);
+            System.out.println("Количество товаров у Пети и Терентия равное: " + petiaBasket.length);
         } else {
             System.out.println("Количество товаров у Пети и Терентия разное");
         }
@@ -32,7 +32,7 @@ public class Main {
         }
 
         if (equal) {
-            System.out.println("Состав корзин у Пети и Коли одинаковый");
+            System.out.println("Состав корзин у Пети и Коли равный");
         } else {
             System.out.println("Состав корзин у Пети и Коли разный");
         }
@@ -49,7 +49,7 @@ public class Main {
         }
 
         if (equal) {
-            System.out.println("Состав корзин у Пети и Терентия одинаковый");
+            System.out.println("Состав корзин у Пети и Терентия равный");
         } else {
             System.out.println("Состав корзин у Пети и Терентия разный");
         }

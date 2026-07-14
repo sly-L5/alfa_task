@@ -18,11 +18,13 @@ public class Main {
         if (noiseInput.equalsIgnoreCase("да")) {
             noiseFilter = true;
         }
+        
         System.out.print("Включить стоп-сигнал? (да/нет): ");
         String stopInput = scanner.nextLine();
         if (stopInput.equalsIgnoreCase("да")) {
             stopSignal = true;
         }
+        
         for (int i = 1; i <= 100; i++) {
             String status = "";
             
@@ -30,9 +32,9 @@ public class Main {
                 status = "Critical!";
                 criticalCount++;
                 if (criticalNumbers.isEmpty()) {
-                    criticalNumbers = criticalNumbers + i;
+                    criticalNumbers += i;
                 } else {
-                    criticalNumbers = criticalNumbers + ", " + i;
+                    criticalNumbers += ", " + i;
                 }
             } else if (i % 3 == 0) {
                 status = "Flaky";
@@ -44,13 +46,16 @@ public class Main {
                 status = "Pass";
                 passCount++;
             }
+            
             boolean shouldPrint = true;
             if (noiseFilter && status.equals("Pass")) {
                 shouldPrint = false;
             }
+            
             if (shouldPrint) {
-                System.out.println("Тест #" + i + ": " + status);
+                System.out.println("  Тест #" + i + ": " + status);
             }
+            
             if (stopSignal && criticalCount >= 3) {
                 System.out.println("\nДостигнуто 3 критических теста! Программа остановлена.");
                 break;
@@ -58,15 +63,16 @@ public class Main {
         }
         
         System.out.println("\n=========== Итоги ночной смены ===========");
-        System.out.println("Всего тестов: 100");
-        System.out.println("Pass: " + passCount);
-        System.out.println("Flaky: " + flakyCount);
-        System.out.println("Bug: " + bugCount);
-        System.out.println("Critical: " + criticalCount);
+        System.out.println("  Всего тестов: 100");
+        System.out.println("  Pass: " + passCount);
+        System.out.println("  Flaky: " + flakyCount);
+        System.out.println("  Bug: " + bugCount);
+        System.out.println("  Critical: " + criticalCount);
         
         if (stopSignal) {
             System.out.println("\nНомера критических тестов: " + criticalNumbers);
         }
+        
         scanner.close();
     }
 }

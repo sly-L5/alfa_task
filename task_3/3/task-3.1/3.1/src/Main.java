@@ -1,19 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        String[] petia = {"курица", "бананы", "творог"};
-        String[] kolia = {"курица", "бананы", "творог"};
-        String[] terentii = {"пиво", "пельмени", "ласка магия черного"};
+        String[] petyaBasket = {"курица", "бананы", "творог"};
+        String[] koliaBasket = {"курица", "бананы", "творог"};
+        String[] terentiiBasket = {"пиво", "пельмени", "ласка магия черного"};
 
         System.out.println("=== Сравнение по количеству товаров ===");
 
-        if (petia.length == kolia.length) {
-            System.out.println("Количество товаров у Пети и Коли одинаковое: " + petia.length);
+        if (petiaBasket.length == koliaBasket.length) {
+            System.out.println("Количество товаров у Пети и Коли одинаковое: " + petiaBasket.length);
         } else {
             System.out.println("Количество товаров у Пети и Коли разное");
         }
 
-        if (petia.length == terentii.length) {
-            System.out.println("Количество товаров у Пети и Терентия одинаковое: " + petia.length);
+        if (petiaBasket.length == terentiiBasket.length) {
+            System.out.println("Количество товаров у Пети и Терентия одинаковое: " + petiaBasket.length);
         } else {
             System.out.println("Количество товаров у Пети и Терентия разное");
         }
@@ -21,11 +21,11 @@ public class Main {
         System.out.println("\n=== Сравнение по составу ===");
 
         boolean equal = true;
-        if (petia.length != kolia.length) {
+        if (petiaBasket.length != koliaBasket.length) {
             equal = false;
         } else {
-            for (int i = 0; i < petia.length; i++) {
-                if (!petia[i].equals(kolia[i])) {
+            for (int i = 0; i < petiaBasket.length; i++) {
+                if (!petiaBasket[i].equals(koliaBasket[i])) {
                     equal = false;
                 }
             }
@@ -38,11 +38,11 @@ public class Main {
         }
 
         equal = true;
-        if (petia.length != terentii.length) {
+        if (petiaBasket.length != terentiiBasket.length) {
             equal = false;
         } else {
-            for (int i = 0; i < petia.length; i++) {
-                if (!petia[i].equals(terentii[i])) {
+            for (int i = 0; i < petiaBasket.length; i++) {
+                if (!petiaBasket[i].equals(terentiiBasket[i])) {
                     equal = false;
                 }
             }
@@ -56,21 +56,21 @@ public class Main {
 
         System.out.println("\n=== Исследование длин названий ===");
 
-        String[] allItems = new String[petia.length + kolia.length + terentii.length];
+        String[] allItems = new String[petiaBasket.length + koliaBasket.length + terentiiBasket.length];
         int index = 0;
 
-        for (int i = 0; i < petia.length; i++) {
-            allItems[index] = petia[i];
+        for (int i = 0; i < petiaBasket.length; i++) {
+            allItems[index] = petiaBasket[i];
             index++;
         }
 
-        for (int i = 0; i < kolia.length; i++) {
-            allItems[index] = kolia[i];
+        for (int i = 0; i < koliaBasket.length; i++) {
+            allItems[index] = koliaBasket[i];
             index++;
         }
 
-        for (int i = 0; i < terentii.length; i++) {
-            allItems[index] = terentii[i];
+        for (int i = 0; i < terentiiBasket.length; i++) {
+            allItems[index] = terentiiBasket[i];
             index++;
         }
 

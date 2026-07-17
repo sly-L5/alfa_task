@@ -4,28 +4,6 @@ public class Parcel {
     private String recipientName;
     private String deliveryAddress;
     protected double weight;
-    String trackingNumber;
-
-    public Parcel(String recipientName, String deliveryAddress, double weight, String trackingNumber) {
-        this.recipientName = recipientName;
-        this.deliveryAddress = deliveryAddress;
-        this.weight = weight;
-        this.trackingNumber = trackingNumber;
-    }
-
-    public Parcel() {
-        this.recipientName = "DEFAULT";
-        this.deliveryAddress = "DEFAULT";
-        this.weight = 0.0;
-        this.trackingNumber = "000000";
-    }
-
- package delivery.model;
-
-public class Parcel {
-    private String recipientName;
-    private String deliveryAddress;
-    protected double weight;
     private String trackingNumber;
 
     public Parcel(String recipientName, String deliveryAddress, double weight, String trackingNumber) {
